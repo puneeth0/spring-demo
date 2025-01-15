@@ -48,6 +48,7 @@ public class HarryPotterCharacter {
             name = "character_spells",
             joinColumns = @JoinColumn(name = "character_id"),
             inverseJoinColumns = @JoinColumn(name = "spell_id")
+
     )
     @JsonManagedReference
     private List<FrequentlyUsedSpell> frequentlyUsedSpells = new ArrayList();
