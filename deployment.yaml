@@ -15,6 +15,7 @@ spec:
       containers:
         - name: spring-demo
           image: puneeth0/spring-demo # Image that will be used to containers in the cluster
-          imagePullPolicy: IfNotPresent
+          #imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
