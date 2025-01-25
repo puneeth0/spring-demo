@@ -45,3 +45,4 @@ CMD ["java", "-jar", "spring-demo.jar"]
 # kubectl delete deployment spring-demo
 # minikube stop
 # minikube delete
+# eval $(minikube docker-env)
