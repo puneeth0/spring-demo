@@ -22,8 +22,8 @@ public class SecurityConfig {
                 .csrf().disable() // Disable CSRF for simplicity (enable it in production)
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll() // Allow Swagger
-                        .requestMatchers(HttpMethod.GET, "/characters/**").permitAll() // Allow GET calls without authentication
-                        .requestMatchers(HttpMethod.POST, "/characters/**").hasRole("ADMIN") // POST restricted to ADMIN
+                        .requestMatchers(HttpMethod.GET, "/potter/**").permitAll() // Allow GET calls without authentication
+                        .requestMatchers(HttpMethod.POST, "/potter/**").hasRole("ADMIN") // POST restricted to ADMIN
                         .anyRequest().authenticated() // Other requests require authentication
                 )
                 .httpBasic(); // Use Basic Authentication
