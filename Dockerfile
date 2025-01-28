@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/spring-demo.jar /app/spring-demo.jar
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 8086
 
 # Command to run the application
 CMD ["java", "-jar", "spring-demo.jar"]
@@ -46,3 +46,11 @@ CMD ["java", "-jar", "spring-demo.jar"]
 # minikube stop
 # minikube delete
 # eval $(minikube docker-env)
+
+#kubectl logs spring-demo-789abcd-xyz
+#kubectl logs --tail=100 spring-demo-789abcd-xyz
+#kubectl logs -f spring-demo-789abcd-xyz
+#kubectl logs -f spring-demo-789abcd-xyz
+# for multiple pods
+#kubectl logs -f -l app=spring-demo
+
